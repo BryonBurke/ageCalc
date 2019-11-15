@@ -1,16 +1,12 @@
 export class Person {
-  constructor(personName, personEarthAge , personPlanet){
+  constructor(personName, personEarthAge , personPlanet, earthLifeExpectancy){
     this.personName = personName;
     this.personEarthAge = personEarthAge;
     this.personPlanet = personPlanet;
+    this.earthLifeExpectancy = earthLifeExpectancy;
   }
 
   convertToPlanetAge(){
-    // mercuryScaleFactor = .24;
-    // venusScaleFactor = .62;
-    // marsScaleFactor = 1.88;
-    // jupiterScaleFactor = 11.86;
-
     if (this.personPlanet === "mercury") {
       let planetAge = (this.personEarthAge / .24);
       return planetAge.toFixed(2);
@@ -24,11 +20,19 @@ export class Person {
       let planetAge = this.personEarthAge / 11.86;
       return planetAge.toFixed(2);
     }
+  }
 
+  LifeExpectancyOnPlanet(){
+    if (this.personPlanet === "mercury") {
+      let planetAge = (this.personEarthAge / .24);
+      let planetLifeExpectancy = (this.earthLifeExpectancy /.24);
+      let timeLeftPlanetYears = planetLifeExpectancy - this.planetAge;
+      return timeLeftPlanetYears.toFixed(2);
+
+
+    }
 
 
 
   }
-
-
 }

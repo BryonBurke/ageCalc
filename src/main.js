@@ -12,7 +12,7 @@ $(document).ready(function(){
     let personEarthAge = pasrseFloat($("#personEarthAge").val());
     let personPlanet = ($("#personPlanet"));
 
-    let newPerson = new Person (personName, personEarthAge, planet);
+    let subjectPerson = new Person (personName, personEarthAge, planet);
 
   });
 });

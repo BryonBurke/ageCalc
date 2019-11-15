@@ -9,10 +9,17 @@ describe('Person', () => {
   //   expect(subjectPerson.personPlanet).toEqual("earth");
   // });
 
-  test('should apply algorithm to compute persons age in mercury years', () => {
-    var subjectPerson = new Person ("Chuck", 35, "mercury");
-    var ageOnMercury = subjectPerson.convertToPlanetAge();
-    expect(ageOnMercury).toEqual(8.4);
+  // test('should apply algorithm to compute persons age in mercury years', () => {
+  //   let subjectPerson = new Person ("Chuck", 35, "mercury");
+  //   let planetAge = subjectPerson.convertToPlanetAge();
+  //   expect(planetAge).toEqual(8.4);
+  //
+  // });
+
+  test('should apply algorithm to compute persons age in venus years', () => {
+    let subjectPerson = new Person ("Chuck", 35, "venus");
+    let planetAge = subjectPerson.convertToPlanetAge();
+    expect(planetAge).toEqual(21.7);
 
   });
 

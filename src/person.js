@@ -12,12 +12,17 @@ export class Person {
     // jupiterScaleFactor = 11.86;
 
     if (this.personPlanet === "mercury") {
-      let planetAge = this.personEarthAge * .24;
-      return planetAge;
+      let planetAge = (this.personEarthAge / .24);
+      return planetAge.toFixed(2);
     } else if (this.personPlanet === "venus") {
-      let planetAge = this.personEarthAge * .62;
+      let planetAge = this.personEarthAge / .62;
       return planetAge;
-
+    }else if (this.personPlanet === "mars") {
+      let planetAge = this.personEarthAge / 1.88;
+      return planetAge;
+    }else if (this.personPlanet === "jupiter") {
+      let planetAge = this.personEarthAge / 11.86;
+      return planetAge;
     }
 
 

@@ -10,7 +10,7 @@ $(document).ready(function(){
 
     let personName = ($("#personName").val());
     let personAge = pasrseFloat($("#personAge").val());
-    let personPlanet = ($("#personPlanet"))
+    let personPlanet = ($("#personPlanet"));
 
     let newPerson = new Person (personName, personAge, planet);
 

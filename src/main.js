@@ -9,9 +9,10 @@ $(document).ready(function(){
     event.preventDefault();
 
     let personName = ($("#personName").val());
-    let personAge = ($("#personAge").val());
+    let personAge = pasrseFloat($("#personAge").val());
+    let personPlanet = ($("#personPlanet"))
 
-    let newPerson = new Person (personName, personAge);
+    let newPerson = new Person (personName, personAge, planet);
 
   });
 });

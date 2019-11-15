@@ -1,14 +1,15 @@
 export class Person {
-  constructor(personName, personAge, personPlanet){
+  constructor(personName, personEarthAge , personPlanet){
     this.personName = personName;
-    this.personAge = personAge;
+    this.personEarthAge = personEarthAge;
     this.personPlanet = personPlanet;
   }
 
-  convertToPlanetAge(planet){
-    if (this.planet = mercury)  {
-      mercuryAge = this.personAge * .24;
-      return mercuryAge ;
+  convertToPlanetAge(){
+    if (this.planet === "mercury")  {
+      ageOnMercury = parseFloat(this.personEarthAge * .24);
+
+
     }
 
 

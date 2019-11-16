@@ -3,10 +3,12 @@ import { Person } from '../src/person.js';
 describe('Person', () => {
 
   // test('should construct a new person', () => {
-  //   let subjectPerson = new Person ("Chuck", 35, "earth");
+  //   let subjectPerson = new Person ("Chuck", 35, "earth", 85);
   //   expect(subjectPerson.personName).toEqual("Chuck");
   //   expect(subjectPerson.personEarthAge).toEqual(35);
   //   expect(subjectPerson.personPlanet).toEqual("earth");
+  //   expect(subjectPerson.earthLifeExpectancy).toEqual(85);
+  //
   // });
 
   // test('should apply algorithm to compute persons age in mercury years', () => {
@@ -40,7 +42,7 @@ describe('Person', () => {
   test('should apply algorithm to compute persons life expectancy in mercury years', () => {
     let subjectPerson = new Person ("Chuck", 35, "jupiter", 85);
     let timeLeftPlanetYears = subjectPerson.LifeExpectancyOnPlanet();
-    expect(planetAge).toEqual("208.84");
+    expect(timeLeftPlanetYears).toEqual("208.84");
 
   });
 

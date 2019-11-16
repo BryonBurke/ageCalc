@@ -25,14 +25,11 @@ export class Person {
   LifeExpectancyOnPlanet(){
     if (this.personPlanet === "mercury") {
       let planetAge = (this.personEarthAge / .24);
+      let planetAgeFloat = parseFloat("planetAge");
       let planetLifeExpectancy = (this.earthLifeExpectancy /.24);
-      let timeLeftPlanetYears = planetLifeExpectancy - this.planetAge;
-      return timeLeftPlanetYears.toFixed(2);
-
-
+      let planetLifeExpectancyFloat = parseFloat("planetLifeExpectancy");
+      let timeLeftPlanetYears = (planetLifeExpectancyFloat - planetAgefloat);
+      return timeLeftPlanetYears;
     }
-
-
-
   }
 }

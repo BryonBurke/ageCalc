@@ -40,10 +40,17 @@ describe('Person', () => {
   // });
 
   test('should apply algorithm to compute persons life expectancy in mercury years', () => {
-    let subjectPerson = new Person ("Chuck", 35, "jupiter", 85);
+    let subjectPerson = new Person ("Chuck", 35, "mercury", 85);
     let timeLeftPlanetYears = subjectPerson.LifeExpectancyOnPlanet();
-    expect(timeLeftPlanetYears).toEqual("208.84");
+    expect(timeLeftPlanetYears).toEqual("208.33");
 
   });
+
+  // test('should apply algorithm to compute persons life expectancy in venus years', () => {
+  //   let subjectPerson = new Person ("Chuck", 35, "venus", 85);
+  //   let timeLeftPlanetYears = subjectPerson.LifeExpectancyOnPlanet();
+  //   expect(timeLeftPlanetYears).toEqual("80.65");
+  //
+  // });
 
 });

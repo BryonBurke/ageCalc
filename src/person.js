@@ -25,11 +25,24 @@ export class Person {
   LifeExpectancyOnPlanet(){
     if (this.personPlanet === "mercury") {
       let planetAge = (this.personEarthAge / .24);
-      let planetAgeFloat = parseFloat("planetAge");
+      let planetAgeFloat = parseFloat(planetAge);
       let planetLifeExpectancy = (this.earthLifeExpectancy /.24);
-      let planetLifeExpectancyFloat = parseFloat("planetLifeExpectancy");
-      let timeLeftPlanetYears = (planetLifeExpectancyFloat - planetAgefloat);
-      return timeLeftPlanetYears;
+      let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
+      let timeLeftPlanetYears = planetLifeExpectancyFloat - planetAgeFloat;
+      return timeLeftPlanetYears.toFixed(2);
     }
+
+    // elseif (this.personPlanet === "venus") {
+    //   let planetAge = (this.personEarthAge / .62);
+    //   let planetAgeFloat = parseFloat(planetAge);
+    //   let planetLifeExpectancy = (this.earthLifeExpectancy / .62);
+    //   let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
+    //   let timeLeftPlanetYears = planetLifeExpectancyFloat - planetAgeFloat;
+    //   return timeLeftPlanetYears.toFixed(2);
+    // }
+
+
   }
+
+
 }

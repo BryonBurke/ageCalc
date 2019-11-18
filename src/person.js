@@ -5,72 +5,42 @@ export class Person {
     this.personPlanet = personPlanet;
     this.earthLifeExpectancy = earthLifeExpectancy;
   }
-
   convertToPlanetAge(){
     if (this.personPlanet === "mercury") {
-      let planetAge = (this.personEarthAge / .24);
-      return planetAge.toFixed(2);
+      var planetScaleFactor = .24
     } else if (this.personPlanet === "venus") {
-      let planetAge = this.personEarthAge / .62;
-      return planetAge.toFixed(2);
+      var planetScaleFactor = .62
     }else if (this.personPlanet === "mars") {
-      let planetAge = this.personEarthAge / 1.88;
-      return planetAge.toFixed(2);
+      var planetScaleFactor = 1.88
     }else if (this.personPlanet === "jupiter") {
-      let planetAge = this.personEarthAge / 11.86;
-      return planetAge.toFixed(2);
+      var planetScaleFactor = 11.86
     }
+    let planetAge = this.personEarthAge / planetScaleFactor;
+    return planetAge.toFixed(2);
   }
-
   LifeExpectancyOnPlanet(){
     if (this.personPlanet === "mercury") {
-      let planetAge = (this.personEarthAge / .24);
-      let planetAgeFloat = parseFloat(planetAge);
-      let planetAgeFixed = planetAgeFloat.toFixed(2);
-      let planetLifeExpectancy = (this.earthLifeExpectancy /.24);
-      let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
-      let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
-      let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
+      var planetScaleFactor = .24
+    } else if (this.personPlanet === "venus") {
+      var planetScaleFactor = .62
+    }else if (this.personPlanet === "mars") {
+      var planetScaleFactor = 1.88
+    }else if (this.personPlanet === "jupiter") {
+      var planetScaleFactor = 11.86
+    }
+    let planetAge = (this.personEarthAge / planetScaleFactor);
+    let planetAgeFloat = parseFloat(planetAge);
+    let planetAgeFixed = planetAgeFloat.toFixed(2);
+    let planetLifeExpectancy = (this.earthLifeExpectancy / planetScaleFactor);
+    let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
+    let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
+    let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
+    if (planetLifeExpectancyFixed >= planetAgeFixed) {
       return timeLeftPlanetYears.toFixed(2);
     }
-
-    else if (this.personPlanet === "venus") {
-      let planetAge = (this.personEarthAge / .62);
-      let planetAgeFloat = parseFloat(planetAge);
-      let planetAgeFixed = planetAgeFloat.toFixed(2);
-      let planetLifeExpectancy = (this.earthLifeExpectancy /.62);
-      let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
-      let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
-      let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
-      return timeLeftPlanetYears.toFixed(2);
+    else {
+      let timeExceededPlanetYears = Math.abs(timeLeftPlanetYears.toFixed(2));
+      return timeExceededPlanetYears.toFixed(2);
     }
-
-    else if (this.personPlanet === "mars") {
-      let planetAge = (this.personEarthAge /1.88);
-      let planetAgeFloat = parseFloat(planetAge);
-      let planetAgeFixed = planetAgeFloat.toFixed(2);
-      let planetLifeExpectancy = (this.earthLifeExpectancy /1.88);
-      let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
-      let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
-      let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
-      return timeLeftPlanetYears.toFixed(2);
-    }
-
-    else if (this.personPlanet === "jupiter") {
-      let planetAge = (this.personEarthAge /11.86);
-      let planetAgeFloat = parseFloat(planetAge);
-      let planetAgeFixed = planetAgeFloat.toFixed(2);
-      let planetLifeExpectancy = (this.earthLifeExpectancy /1.88);
-      let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
-      let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
-      let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
-      return timeLeftPlanetYears.toFixed(2);
-    }
-
-
-
-
   }
-
-
 }

@@ -67,28 +67,28 @@ describe('Person', () => {
 
   });
 
-  test('should check for a persons planet age greater than life expectancy. If greater, return the amount of time that person has exeeded life expectancy in planet visit', () => {
+  test('should check for a persons planet age greater than life expectancy. If greater, return the amount of time that person has exeeded life expectancy in planet years', () => {
     let subjectPerson = new Person ("Chuck", 90, "mercury", 85);
     let timeExceededPlanetYears = subjectPerson.LifeExpectancyOnPlanet();
     expect(timeExceededPlanetYears).toEqual("20.83");
 
   });
 
-  test('should check for a persons planet age greater than life expectancy. If greater, return the amount of time that person has exeeded life expectancy in planet visit', () => {
+  test('should check for a persons planet age greater than life expectancy. If greater, return the amount of time that person has exeeded life expectancy in planet years', () => {
     let subjectPerson = new Person ("Chuck", 90, "venus", 85);
     let timeExceededPlanetYears = subjectPerson.LifeExpectancyOnPlanet();
     expect(timeExceededPlanetYears).toEqual("8.06");
 
   });
 
-  test('should check for a persons planet age greater than life expectancy. If greater, return the amount of time that person has exeeded life expectancy in planet visit', () => {
+  test('should check for a persons planet age greater than life expectancy. If greater, return the amount of time that person has exeeded life expectancy in planet years', () => {
     let subjectPerson = new Person ("Chuck", 90, "mars", 85);
     let timeExceededPlanetYears = subjectPerson.LifeExpectancyOnPlanet();
     expect(timeExceededPlanetYears).toEqual("2.66");
 
   });
 
-  test('should check for a persons planet age greater than life expectancy. If greater, return the amount of time that person has exeeded life expectancy in planet visit', () => {
+  test('should check for a persons planet age greater than life expectancy. If greater, return the amount of time that person has exeeded life expectancy in planet years', () => {
     let subjectPerson = new Person ("Chuck", 90, "jupiter", 85);
     let timeExceededPlanetYears = subjectPerson.LifeExpectancyOnPlanet();
     expect(timeExceededPlanetYears).toEqual("0.42");

@@ -7,16 +7,16 @@ export class Person {
   }
   setPlanetScaleFactor(){
     if (this.personPlanet === "mercury") {
-      var planetScaleFactor = .24
+      const planetScaleFactor = .24
       return planetScaleFactor;
     } else if (this.personPlanet === "venus") {
-      var planetScaleFactor = .62
+      const planetScaleFactor = .62
       return planetScaleFactor;
     }else if (this.personPlanet === "mars") {
-      var planetScaleFactor = 1.88
+      const planetScaleFactor = 1.88
       return planetScaleFactor;
     }else if (this.personPlanet === "jupiter") {
-      var planetScaleFactor = 11.86
+      const planetScaleFactor = 11.86
       return planetScaleFactor;
     }
   }

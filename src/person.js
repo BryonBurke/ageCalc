@@ -5,30 +5,29 @@ export class Person {
     this.personPlanet = personPlanet;
     this.earthLifeExpectancy = earthLifeExpectancy;
   }
-  convertToPlanetAge(){
+  setPlanetScaleFactor(){
     if (this.personPlanet === "mercury") {
       var planetScaleFactor = .24
+      return planetScaleFactor;
     } else if (this.personPlanet === "venus") {
       var planetScaleFactor = .62
+      return planetScaleFactor;
     }else if (this.personPlanet === "mars") {
       var planetScaleFactor = 1.88
+      return planetScaleFactor;
     }else if (this.personPlanet === "jupiter") {
       var planetScaleFactor = 11.86
+      return planetScaleFactor;
     }
+  }
+  convertToPlanetAge(){
+    let planetScaleFactor = this.setPlanetScaleFactor();
     let planetAge = this.personEarthAge / planetScaleFactor;
     return planetAge.toFixed(2);
   }
   LifeExpectancyOnPlanet(){
-    if (this.personPlanet === "mercury") {
-      var planetScaleFactor = .24
-    } else if (this.personPlanet === "venus") {
-      var planetScaleFactor = .62
-    }else if (this.personPlanet === "mars") {
-      var planetScaleFactor = 1.88
-    }else if (this.personPlanet === "jupiter") {
-      var planetScaleFactor = 11.86
-    }
-    let planetAge = (this.personEarthAge / planetScaleFactor);
+    let planetScaleFactor = this.setPlanetScaleFactor();
+    let planetAge = this.convertToPlanetAge();
     let planetAgeFloat = parseFloat(planetAge);
     let planetAgeFixed = planetAgeFloat.toFixed(2);
     let planetLifeExpectancy = (this.earthLifeExpectancy / planetScaleFactor);

@@ -11,8 +11,9 @@ $(document).ready(function(){
     let personName = ($("#personName").val());
     let personEarthAge = pasrseFloat($("#personEarthAge").val());
     let personPlanet = ($("#personPlanet"));
+    let earthLifeExpectancy = pasrseFloat($("#earthLifeExpectancy").val());
 
-    let subjectPerson = new Person (personName, personEarthAge, planet);
+    let subjectPerson = new Person (personName, personEarthAge, planet, earthLifeExpectancy);
 
   });
 });

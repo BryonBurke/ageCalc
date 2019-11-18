@@ -26,36 +26,44 @@ export class Person {
     if (this.personPlanet === "mercury") {
       let planetAge = (this.personEarthAge / .24);
       let planetAgeFloat = parseFloat(planetAge);
+      let planetAgeFixed = planetAgeFloat.toFixed(2);
       let planetLifeExpectancy = (this.earthLifeExpectancy /.24);
       let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
-      let timeLeftPlanetYears = planetLifeExpectancyFloat - planetAgeFloat;
+      let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
+      let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
       return timeLeftPlanetYears.toFixed(2);
     }
 
-    if (this.personPlanet === "venus") {
+    else if (this.personPlanet === "venus") {
       let planetAge = (this.personEarthAge / .62);
       let planetAgeFloat = parseFloat(planetAge);
+      let planetAgeFixed = planetAgeFloat.toFixed(2);
       let planetLifeExpectancy = (this.earthLifeExpectancy /.62);
       let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
-      let timeLeftPlanetYears = planetLifeExpectancyFloat - planetAgeFloat;
+      let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
+      let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
       return timeLeftPlanetYears.toFixed(2);
     }
 
-    if (this.personPlanet === "mars") {
+    else if (this.personPlanet === "mars") {
       let planetAge = (this.personEarthAge /1.88);
       let planetAgeFloat = parseFloat(planetAge);
+      let planetAgeFixed = planetAgeFloat.toFixed(2);
       let planetLifeExpectancy = (this.earthLifeExpectancy /1.88);
       let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
-      let timeLeftPlanetYears = planetLifeExpectancyFloat - planetAgeFloat;
+      let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
+      let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
       return timeLeftPlanetYears.toFixed(2);
     }
 
-    if (this.personPlanet === "jupiter") {
+    else if (this.personPlanet === "jupiter") {
       let planetAge = (this.personEarthAge /11.86);
       let planetAgeFloat = parseFloat(planetAge);
+      let planetAgeFixed = planetAgeFloat.toFixed(2);
       let planetLifeExpectancy = (this.earthLifeExpectancy /1.88);
       let planetLifeExpectancyFloat = parseFloat(planetLifeExpectancy);
-      let timeLeftPlanetYears = planetLifeExpectancyFloat - planetAgeFloat;
+      let planetLifeExpectancyFixed = planetLifeExpectancyFloat.toFixed(2);
+      let timeLeftPlanetYears = planetLifeExpectancyFixed - planetAgeFixed;
       return timeLeftPlanetYears.toFixed(2);
     }
 

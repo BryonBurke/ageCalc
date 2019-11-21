@@ -44,3 +44,5 @@ Specifications
 4. Create algorithm to make time to live calculation. First version accepts user input life expectancy.
 5. Return time exceeding expectancy if person is older than expectancy.
 6. Upgrade time to live by collecting user lifestyle information for calculation.
+
+Github pages link https://bryonburke.github.io/ageCalc/
